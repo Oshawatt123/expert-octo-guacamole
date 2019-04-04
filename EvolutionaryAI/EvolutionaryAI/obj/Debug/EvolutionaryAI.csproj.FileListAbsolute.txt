@@ -1,0 +1,7 @@
+C:\Users\Games\source\repos\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.csprojAssemblyReference.cache
+C:\Users\Games\source\repos\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.csproj.CoreCompileInputs.cache
+C:\Users\Games\source\repos\EvolutionaryAI\EvolutionaryAI\bin\Debug\EvolutionaryAI.exe.config
+C:\Users\Games\source\repos\EvolutionaryAI\EvolutionaryAI\bin\Debug\EvolutionaryAI.exe
+C:\Users\Games\source\repos\EvolutionaryAI\EvolutionaryAI\bin\Debug\EvolutionaryAI.pdb
+C:\Users\Games\source\repos\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.exe
+C:\Users\Games\source\repos\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.pdb
