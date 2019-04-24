@@ -11,7 +11,7 @@ namespace EvolutionaryAI
     {
 
         private int NoEntities = 10;
-        private List<Entity> EntityList = new List<Entity>();
+        private static List<Entity> EntityList = new List<Entity>();
 
         private Entity topEntity1 = null;
         private Entity topEntity2 = null;
@@ -179,11 +179,12 @@ namespace EvolutionaryAI
             {
                 tempList = EntityList[2].characterList;
                 // for a random number of letters
-                for (int j = 0; j < RandomHelper.RandInt(1, 4); j++)
+                for (int j = 0; j < 1; j++)
                 {
                     int randomInt = RandomHelper.RandInt(65, 91);
-                    tempList[RandomHelper.RandInt(0, 5)] = (char)randomInt; // set a random old letter to a new random letter
+                    tempList[3] = (char)randomInt; // set a random old letter to a new random letter
                 }
+                Console.WriteLine("Mutated entity " + i + " to : " + string.Join(",", tempList.ToArray()));
                 EntityList[i] = new Entity(tempList);
             }
         }
@@ -191,9 +192,10 @@ namespace EvolutionaryAI
         // Warning: recursive
         private void Evolve()
         {
+            Console.WriteLine();
             for (int i = 0; i < NoEntities; i++)
             {
-                Console.WriteLine(EntityList[i].ToString());
+                Console.WriteLine("Entity " + i + " : " + EntityList[i].ToString());
             }
         }
     }
