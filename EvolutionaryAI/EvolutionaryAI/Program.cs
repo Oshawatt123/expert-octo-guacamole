@@ -11,7 +11,6 @@ namespace EvolutionaryAI
         static void Main(string[] args)
         {
             AIClass stringBoi = new AIClass("Hello");
-            Console.ReadLine();
             stringBoi.Start();
             Console.ReadLine();
             //stringBoi

@@ -99,6 +99,8 @@ namespace EvolutionaryAI
 
         public void Start()
         {
+            Console.WriteLine("The first roster:");
+            Console.WriteLine();
             for (int i = 0; i < NoEntities; i++)
             {
                 Entity newEntity = new Entity();
@@ -146,6 +148,8 @@ namespace EvolutionaryAI
 
         private void Breed()
         {
+            Console.WriteLine();
+            Console.WriteLine("The Breeding process: ");
             EntityList[0] = topEntity1;
             EntityList[1] = topEntity2;
 
@@ -162,7 +166,7 @@ namespace EvolutionaryAI
             tempList.Add(topEntity2.characterList[4]);
 
             EntityList[2] = new Entity(tempList);
-
+            Console.WriteLine("Bred Top entities to produce : " + EntityList[2].ToString());
             // Second Breed
             tempList = new List<char>();
 
@@ -173,7 +177,7 @@ namespace EvolutionaryAI
             tempList.Add(topEntity1.characterList[4]);
 
             EntityList[3] = new Entity(tempList);
-
+            Console.WriteLine("Bred Top entities to produce : " + EntityList[3].ToString());
             // Mutations
             for (int i = 4; i < NoEntities; i++)
             {
