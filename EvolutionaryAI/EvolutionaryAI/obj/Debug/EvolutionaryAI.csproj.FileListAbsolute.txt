@@ -12,3 +12,10 @@ D:\GitHub Tings\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\obj\Debug\Ev
 D:\GitHub Tings\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.csproj.CoreCompileInputs.cache
 D:\GitHub Tings\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.exe
 D:\GitHub Tings\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.pdb
+C:\Users\Games\Documents\GitHub\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\bin\Debug\EvolutionaryAI.exe.config
+C:\Users\Games\Documents\GitHub\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\bin\Debug\EvolutionaryAI.exe
+C:\Users\Games\Documents\GitHub\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\bin\Debug\EvolutionaryAI.pdb
+C:\Users\Games\Documents\GitHub\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.csprojAssemblyReference.cache
+C:\Users\Games\Documents\GitHub\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.csproj.CoreCompileInputs.cache
+C:\Users\Games\Documents\GitHub\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.exe
+C:\Users\Games\Documents\GitHub\expert-octo-guacamole\EvolutionaryAI\EvolutionaryAI\obj\Debug\EvolutionaryAI.pdb
