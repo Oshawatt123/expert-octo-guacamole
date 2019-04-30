@@ -19,6 +19,8 @@ namespace EvolutionaryAI
         private static string TargetString;
         List<Char> characterList = new List<Char>();
 
+        private int generation = 1;
+
         /// <summary>
         /// Creates an instance of an Evolutionary AI.
         /// </summary>
@@ -112,6 +114,9 @@ namespace EvolutionaryAI
             Breed();
 
             Evolve();
+
+            Console.WriteLine("HA!");
+            Console.WriteLine("Got Em!");
         }
 
         private void getNewTopDogs()
@@ -120,7 +125,6 @@ namespace EvolutionaryAI
             {
                 Console.Write(entity.ToString());
                 Console.WriteLine(" : " + entity.Strength);
-                // breed
 
                 // first time checks
                 if (topEntity1 == null)
@@ -178,18 +182,36 @@ namespace EvolutionaryAI
 
             EntityList[3] = new Entity(tempList);
             Console.WriteLine("Bred Top entities to produce : " + EntityList[3].ToString());
+
+
             // Mutations
             for (int i = 4; i < NoEntities; i++)
             {
-                tempList = EntityList[2].characterList;
+                Console.WriteLine("--------------------");
+
+                foreach (Entity entity in EntityList)
+                {
+                    Console.WriteLine("Entity list: " + string.Join(",", entity.characterList.ToArray()));
+                }
+
+                Console.WriteLine("--------------------");
+
+                // copy all characters over to avoid references to entity 3 ([2])
+                tempList = new List<char>();
+                foreach (char character in EntityList[2].characterList)
+                {
+                    tempList.Add(character);
+                }
+
                 // for a random number of letters
                 for (int j = 0; j < 1; j++)
                 {
                     int randomInt = RandomHelper.RandInt(65, 91);
-                    tempList[3] = (char)randomInt; // set a random old letter to a new random letter
+                    tempList[RandomHelper.RandInt(0, TargetString.Length)] = (char)randomInt; // set a random old letter to a new random letter
                 }
                 Console.WriteLine("Mutated entity " + i + " to : " + string.Join(",", tempList.ToArray()));
                 EntityList[i] = new Entity(tempList);
+                Console.WriteLine(EntityList[i].characterList.ToString());
             }
         }
         
@@ -200,7 +222,23 @@ namespace EvolutionaryAI
             for (int i = 0; i < NoEntities; i++)
             {
                 Console.WriteLine("Entity " + i + " : " + EntityList[i].ToString());
+                if (EntityList[i].ToString() == TargetString)
+                {
+                    Console.WriteLine("AAYYYYYYYYYYYYYYYYYYYYYYY BOOOOOOIIIIIIIIIIIII");
+                    return;
+                }
             }
+
+            getNewTopDogs();
+
+            Breed();
+
+            Console.WriteLine("Generation " + generation + " has failed to meet requirements.");
+            generation += 1;
+            Console.ReadLine();
+
+            Evolve();
+
         }
     }
 }
