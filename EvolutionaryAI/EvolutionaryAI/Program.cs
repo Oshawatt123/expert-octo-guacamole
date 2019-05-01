@@ -10,7 +10,7 @@ namespace EvolutionaryAI
     {
         static void Main(string[] args)
         {
-            AIClass stringBoi = new AIClass("Hello");
+            AIClass stringBoi = new AIClass("Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch");
             stringBoi.Start();
             Console.ReadLine();
             //stringBoi

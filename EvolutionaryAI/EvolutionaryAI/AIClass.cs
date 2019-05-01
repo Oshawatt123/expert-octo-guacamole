@@ -68,7 +68,7 @@ namespace EvolutionaryAI
 
             private void calculateStrength()
             {
-                for (int i = 0; i < TargetString.Length; i++)
+                for (int i = 0; i < TargetString.Length-1; i++)
                 {
                     if (TargetString.Contains(characterList[i])) // contains
                     {
@@ -163,22 +163,28 @@ namespace EvolutionaryAI
             // First Breed
             List<char> tempList = new List<char>();
 
-            tempList.Add(topEntity1.characterList[0]);
-            tempList.Add(topEntity1.characterList[1]);
-            tempList.Add(topEntity2.characterList[2]);
-            tempList.Add(topEntity2.characterList[3]);
-            tempList.Add(topEntity2.characterList[4]);
+            for (int i = 0; i < topEntity1.characterList.Count/2; i++)
+            {
+                tempList.Add(topEntity1.characterList[i]);
+            }
+            for (int i = topEntity2.characterList.Count/2; i < topEntity2.characterList.Count; i++)
+            {
+                tempList.Add(topEntity2.characterList[i]);
+            }
 
             EntityList[2] = new Entity(tempList);
             Console.WriteLine("Bred Top entities to produce : " + EntityList[2].ToString());
             // Second Breed
             tempList = new List<char>();
 
-            tempList.Add(topEntity2.characterList[0]);
-            tempList.Add(topEntity2.characterList[1]);
-            tempList.Add(topEntity1.characterList[2]);
-            tempList.Add(topEntity1.characterList[3]);
-            tempList.Add(topEntity1.characterList[4]);
+            for (int i = 0; i < topEntity2.characterList.Count / 2; i++)
+            {
+                tempList.Add(topEntity2.characterList[i]);
+            }
+            for (int i = topEntity1.characterList.Count / 2; i < topEntity1.characterList.Count; i++)
+            {
+                tempList.Add(topEntity1.characterList[i]);
+            }
 
             EntityList[3] = new Entity(tempList);
             Console.WriteLine("Bred Top entities to produce : " + EntityList[3].ToString());
@@ -206,7 +212,7 @@ namespace EvolutionaryAI
                 // for a random number of letters
                 for (int j = 0; j < 1; j++)
                 {
-                    int randomInt = RandomHelper.RandInt(65, 91);
+                    int randomInt = RandomHelper.RandInt(32, 123);
                     tempList[RandomHelper.RandInt(0, TargetString.Length)] = (char)randomInt; // set a random old letter to a new random letter
                 }
                 Console.WriteLine("Mutated entity " + i + " to : " + string.Join(",", tempList.ToArray()));
@@ -235,7 +241,6 @@ namespace EvolutionaryAI
 
             Console.WriteLine("Generation " + generation + " has failed to meet requirements.");
             generation += 1;
-            Console.ReadLine();
 
             Evolve();
 
