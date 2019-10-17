@@ -70,11 +70,11 @@ namespace EvolutionaryAI
             {
                 for (int i = 0; i < TargetString.Length-1; i++)
                 {
-                    if (TargetString.Contains(characterList[i])) // contains
+                    if (TargetString.Contains(characterList[i])) // target word has this letter in it
                     {
                         Strength += 2;
                     }
-                    if (characterList[i].ToString() == TargetString.Substring(i, 1)) // is in correct place
+                    if (characterList[i].ToString() == TargetString.Substring(i, 1)) // target word has this letter in it and it is in the correct place
                     {
                         Strength += 5;
                     }
@@ -112,6 +112,8 @@ namespace EvolutionaryAI
             getNewTopDogs();
 
             Breed();
+
+            Console.ReadKey();
 
             Evolve();
 
@@ -217,7 +219,6 @@ namespace EvolutionaryAI
                 }
                 Console.WriteLine("Mutated entity " + i + " to : " + string.Join(",", tempList.ToArray()));
                 EntityList[i] = new Entity(tempList);
-                Console.WriteLine(EntityList[i].characterList.ToString());
             }
         }
         

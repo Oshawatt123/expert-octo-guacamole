@@ -10,7 +10,8 @@ namespace EvolutionaryAI
     {
         static void Main(string[] args)
         {
-            AIClass stringBoi = new AIClass("Char is Awesome");
+            // Warning : Recursive
+            AIClass stringBoi = new AIClass("Smol");
             stringBoi.Start();
             Console.ReadLine();
         }
